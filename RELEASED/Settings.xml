@@ -1,0 +1,11 @@
+<Settings>
+	<Theme>xpnative</Theme>        
+	<language>English</language>
+	<BUILD_DIR>BUILD</BUILD_DIR>
+	<PS3_KEYS>.ps3/data</PS3_KEYS>	
+	<IN_DIR>IN</IN_DIR>
+	<IN_FILE></IN_FILE>	
+	<OUT_DIR>OUT</OUT_DIR>
+	<OUT_FILE>MFW_TEST</OUT_FILE>	    
+	<tasks>patch_version broken_bluray patch_cos patch_appldr patch_xmb patch_vsh add_license_msg</tasks>
+</Settings>
