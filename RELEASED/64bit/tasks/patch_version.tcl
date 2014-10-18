@@ -18,7 +18,7 @@
 # Option --version-suffix: Suffix to add to the PUP version string
 
 # Type --enable-spoof-build: boolean
-# Type --spoof-build-custom: combobox { }
+# Type --spoof-build-number: string
 # Type --version-string: string
 # Type --version-prefix: string
 # Type --version-suffix: string
