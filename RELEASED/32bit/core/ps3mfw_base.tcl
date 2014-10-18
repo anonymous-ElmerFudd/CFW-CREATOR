@@ -249,7 +249,8 @@ proc die {message} {
     puts stderr "*****************"
     catch {puts stderr "[tail $LOG_FILE]"}
     puts stderr "*****************"
-    exit -2
+    #exit -2
+	error "FATAL ERROR: $message"
 }
 
 proc catch_die {command message} {
