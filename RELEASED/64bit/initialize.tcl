@@ -5,12 +5,6 @@
 
 set ::PS3MFW_VERSION "1.0.0.0"
 
-set ::CFW_SUPPORT_SCRIPTS {
-	"core\\xml.tcl"
-	"core\\tar.tcl"
-	"core\\ps3mfw_base.tcl"
-	"core\\ps3mfw_tasks.tcl"
-}
 
 # ----- *** GLOBAL SETTINGS *** ----- #
 array set ::options {
@@ -42,6 +36,7 @@ set ::env(PS3_KEYS) ""
 #set ::PS3MFW_DIR [file dirname [info script]]
 set ::PS3MFW_DIR [pwd]
 set ::TASKS_DIR [file join ${::PS3MFW_DIR} tasks]
+set ::CFW_SUPPORT_SCRIPTS_DIR [file join ${::PS3MFW_DIR} core]
 set ::program [file tail [pwd]]
 set ::taskfiles [list]
 set ::TASKS [list]
@@ -55,9 +50,11 @@ set ::current_task_opt ""
 
 # --------------------------------------------------- #
 # ------- source in the main 'SUPPORT' scripts ------ #
+# *** ALL 'SUPPORT' files loaded from the 'core' directory ***
 #
-foreach script $::CFW_SUPPORT_SCRIPTS {
-	source $script
+set ::cfw_support_files [glob -nocomplain [file join ${::CFW_SUPPORT_SCRIPTS_DIR} *.tcl]]
+foreach script $::cfw_support_files {
+	source ${::script}
 }
 #
 # --------------------------------------------------- #
