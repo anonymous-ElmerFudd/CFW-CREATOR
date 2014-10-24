@@ -1,4 +1,5 @@
 <Settings>
+	<Resolution>1200x800</Resolution>
 	<Theme>xpnative</Theme>        
 	<language>English</language>
 	<BUILD_DIR>BUILD</BUILD_DIR>

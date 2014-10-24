@@ -21,6 +21,7 @@ array set ::options {
 # initialize all 'setup' variables initially, 
 # so we don't blow up upon failure to read in errors
 
+set ::RESOLUTION ""
 set ::PS3MFW_DIR ""
 set ::BUILD_DIR ""
 set ::IN_DIR ""
@@ -79,6 +80,7 @@ if {[file exists [::xml::GetData ${::xmlang} "Settings:PS3_KEYS" 0]]} {
 	set ::env(PS3_KEYS) " "
 }
 
+set ::RESOLUTION [::xml::GetData ${::xmlang} "Settings:Resolution" 0]
 set ::BUILD_DIR [file join ${::PS3MFW_DIR} [::xml::GetData ${::xmlang} "Settings:BUILD_DIR" 0]]		
 set ::IN_DIR [file join ${::PS3MFW_DIR} [::xml::GetData ${::xmlang} "Settings:IN_DIR" 0]]
 set ::IN_FILE [file join ${::IN_DIR} [::xml::GetData ${::xmlang} "Settings:IN_FILE" 0]]	
